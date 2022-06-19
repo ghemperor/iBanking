@@ -1,0 +1,107 @@
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Thanh toán thành công!</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <style>
+            body {
+                background-color: #f0e2f3;
+            }
+            .success-div {
+                  background-color: #fff;
+                  width: 700px;
+                  height: 800px;
+                  padding: 10px;
+                  margin-top:20px;
+                  border-radius: 30px;
+                }
+                .success-text{
+                  text-align: center;
+                  font-weight: bold;
+                  color: #47ba00;
+                  font-size: 40px;
+                  margin-top: 25px;
+                }
+                .email-text {
+                  text-align: center;
+                  margin-top: -20px;
+                  font-weight: bold;
+                  font-size: 18px;
+                }
+                .payment-div{
+                  background-color: #fff;
+                }
+                .success-circle {
+                  text-align: center;
+                  z-index: 1;
+                  margin-top: -20px;
+                }
+                .cute-gif {
+                  margin-top: -550px;
+                  text-align: center;
+                  z-index: 2;
+                }
+                #btn-back {
+                  margin-top: 30px;
+                  padding: 12px 28px;
+                  border: none;
+                  outline-width: 0;
+                  color: white;
+                  border-radius: 24px;
+                  cursor: pointer;
+                  font-weight: bold;
+                  font-size: 20px;
+                  width: 80px;
+                  background-image: linear-gradient(
+                    120deg,
+                    hsl(313, 87%, 33%),
+                    hsl(330, 75%, 77%)
+                  );
+                  text-decoration: none;
+                  text-align: center;
+                  display:block;
+                  margin: 0 auto;
+                }
+
+                .text-success {
+                  border-top-right-radius: 30px;
+                  border-top-left-radius: 30px;
+                  margin-top: -10px;
+                  margin-right: -10px;
+                  margin-left: -10px;
+                  background-image: url('../static/images/blossom.gif');
+                  background-size: cover;
+                  /* background-color: #ecb3cd; */
+                  height: 60px;
+                }
+
+                .background {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                }
+
+        </style>
+    </head>
+    <body>
+        <div class="background">    
+            <div class="success-div">
+                <div class="text-success">
+                    </div>
+                    <h3 class="success-text"> THANH TOÁN THÀNH CÔNG! </h3>
+                    <p class="email-text"> Chúng tôi vừa gửi cho bạn email. Hãy kiểm tra email và xác nhận lại.</p>
+                    <div class="success-circle">
+                        <img src="../static/images/pink-circle.png"  alt="" style="z-index: 1;" />
+                        <a href="/signup" id="btn-back"> Trở về </a>
+                            <div class="cute-gif">
+                                <img src="../static/images/success-cute.gif" alt="" style="z-index: 2;" />
+                                </div>
+                        </div>
+                    </div>
+                </div>
+        <script></script>
+    </body>
+</html>

@@ -1,0 +1,164 @@
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Login</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <style>
+            .contain-split {
+              background-color: #f2e6f4;
+              width: 65%;
+              height: 80%;
+              border-radius: 30px;
+              display: flex;
+              border: white solid 3px;
+            }
+            .contain-csplit {
+              display: flex;
+              justify-content: center;
+              align-items:center;
+              width: 100%;
+              height: 100%;
+
+            }
+
+            .contain-left {
+              width: 50%;
+              height: 100%;
+              border-top-left-radius: 30px;
+              border-bottom-left-radius: 30px;
+              background-color: #de9fa7;
+              background-image: url('../static/images/blossom.gif');
+              opacity: 0.4;
+              background-size: cover;
+            }
+
+            .contain-right {
+              width: 50%;
+              height: 100%;
+              border-top-right-radius: 30px;
+              border-bottom-right-radius: 30px;
+              background-color: #f2e6f4;
+              margin-left: auto;
+              margin-right: 0;
+              display: flex;
+              flex-direction: column;
+              z-index: 1;
+              /* filter: blur(8px); */
+              justify-content: center;
+            }
+
+            #index-logo {
+              width: 90px;
+              height: 90px;
+              border-radius: 50%;
+              margin-left: auto;
+              margin-right: auto;
+              margin-top: 220px;
+              display: block;
+            }
+            .index-text{
+              text-align: center;
+              font-size: 18px;
+              font-weight: 600;
+            }
+
+            .contain-logo-text {
+              /* backdrop-filter: blur(10px); */
+              width:100%;
+              border-radius: 30px;
+              margin-top: -286px;
+            }
+            #tenNguoiDung {
+              border-radius: 7px;
+              width: 300px;
+              height: 40px;
+              border: none;
+              margin: auto;
+              padding-left: 10px;
+              font-size: 13px;
+
+            }
+            #matKhau {
+              margin-top: 10px;
+              border-radius: 7px;
+              width: 300px;
+              height: 40px;
+              border: none;
+              padding-left: 10px;
+              font-size: 13px;
+              margin: 15px auto;
+              margin-bottom: 18px;
+            }
+            #tenNguoiDung, #matKhau:focus {
+              outline: none;
+            }
+            .login-form {
+              margin-left: auto;
+              margin-right: auto;
+              display: flex;
+              flex-direction: column;
+            }
+            .index-btn {
+              margin: 15px auto;
+              border: none;
+              outline-width: 0;
+              color: white;
+              border-radius: 7px;
+              cursor: pointer;
+              font-size: 13px;
+              width: 300px;
+              height: 40px;
+              background-image: linear-gradient(
+                120deg,
+                hsl(313, 87%, 33%),
+                hsl(330, 75%, 77%)
+              );
+              text-decoration: none;
+              text-align: center;
+              display:block;
+              margin: 0 auto;
+            }
+            .index-form {
+              margin-left: auto;
+              margin-right: auto;
+              display: flex;
+              flex-direction: column;
+            }
+            .index-error-text {
+              color: red
+            }
+
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <style>
+            body {
+                background-color: #f0e2f3;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="contain-csplit">
+            <div class="contain-split">
+                <div class="contain-left"> </div>       
+                <div class="contain-right">
+                    <div class="contain-logo-text">
+                        <img id="index-logo" src="../static/images/vtpbanklogo.png" alt="" style="z-index: 2;" />
+                        <p class="index-text"> Chào mừng đến với ngân hàng VTP!</p>
+                    </div>
+                    <div class="login-form">
+                        <form action="/login" method="POST" class="index-form">
+                                <input type="text" id="tenNguoiDung" name="tenNguoiDung" required placeholder="Vui lòng nhập tài khoản email">
+                                <input type="password" id="matKhau" name="matKhau" required placeholder="Vui lòng nhập mật khẩu"/>
+                                {% if errorMessage %}
+                                <p class="index-error-text">{{ errorMessage }}</p>
+                                {% endif %}
+                                <button class="index-btn">Đăng nhập</button>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>

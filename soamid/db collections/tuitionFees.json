@@ -1,0 +1,22 @@
+{
+    "_id" : ObjectId("6020da77db71d032be103b6d"),
+    "tenSinhVien" : "Nguyen Van A",
+    "mssv" : "519H0216",
+    "trangThaiThanhToan" : "Nợ học phí",
+    "hocPhi" : 24000000.0,
+    "lichSuThanhToan" : {
+        "nguoiThucHienGiaoDich" : "",
+        "ngayThang" : ""
+    }
+}
+{
+    "_id" : ObjectId("6020da77db71d032be103b6e"),
+    "tenSinhVien" : "Nguyễn Khả Phúc",
+    "mssv" : "519H0217",
+    "trangThaiThanhToan" : "Đã thanh toán",
+    "hocPhi" : 25000000.0,
+    "lichSuThanhToan" : {
+        "nguoiThucHienGiaoDich" : "Nguyễn Khả Phúc",
+        "ngayThang" : "Mon Apr 25 2022 19:25:20 GMT+0700 (Indochina Time)"
+    }
+}

@@ -1,0 +1,157 @@
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Xác thực OTP</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <style>
+            body {
+                background-color: #f0e2f3;
+            }
+            .background {
+                margin-top: 50px;
+                background-color: red;
+                margin-bottom: 50px;
+                border-radius: 10px;
+                padding-top: 1rem;
+            }   
+            .counterCell:before {
+                content: counter(tableCount);
+                counter-increment: tableCount;
+            }
+            table {
+                counter-reset: tableCount;
+            }
+            .payment-ver-background {
+                  margin: 59px auto;
+                  height: 70%;
+                  width: 25%;
+                  padding-right: 30px;
+                  padding-left: 30px;
+                  background-image: url('../static/images/blossom.gif');
+                  background-size: cover;
+                  border-radius: 30px;
+                  border: white solid 3px;
+                  opacity: 0.9;
+                }
+
+                .otp-v-container {
+                  border-radius: 30px;
+                  margin-left: 10px;
+                  margin-right: 10px;
+                }
+                .otp-fill {
+                  margin-left: auto;
+                  margin-right: auto;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                }
+
+                .otp-ver-form {
+                  height: 400px;
+                  padding-top: 15px;
+                  margin: 40px;
+
+                }
+                .otp-ver-container {
+                  background-color:transparent;
+                  border-radius: 30px;
+                }
+
+                .otp-text {
+                  text-align: center;
+                  font-size: 25px;
+                  font-weight: bold;
+                  margin-top: 10px
+                }
+                .otp-ver-cover {
+                  margin-top: 10px;
+                  background-color: #FBF2F4;
+                  border-radius: 30px;
+                }
+                #otp {
+                  border-radius: 7px;
+                  width: 250px;
+                  height: 40px;
+                  border: none;
+                  padding-left: 10px;
+                  font-size: 13px;
+                  text-align: center;
+                  border: solid 1px;
+                }
+
+                .otp-confirm {
+                  margin-top: 20px;
+                  margin-left: auto;
+                  margin-right: auto;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                }
+
+                .otp-confirm-btn {
+                  border: none;
+                  outline-width: 0;
+                  color: white;
+                  border-radius: 7px;
+                  cursor: pointer;
+                  font-size: 16px;
+                  width: 200px;
+                  height: 40px;
+                  background-image: linear-gradient(
+                    120deg,
+                    hsl(313, 87%, 33%),
+                    hsl(330, 75%, 77%)
+                  );
+                  text-decoration: none;
+                  text-align: center;
+                  display:block;
+                }
+
+                #logout {
+                  border: none;
+                  color: white;
+                  border-radius: 7px;
+                  cursor: pointer;
+                  font-size: 16px;
+                  width: 100px;
+                  height: 40px;
+                  background-image: linear-gradient(
+                    120deg,
+                    hsl(313, 87%, 33%),
+                    hsl(330, 75%, 77%)
+                  );
+                  text-decoration: none;
+                  text-align: center;
+                  display: inline-flex;
+                  justify-content: center;
+                  align-items: center;
+                  margin-top: 130px;
+                  margin-left: 300px;
+                }
+        </style>
+    </head>
+    <body>
+        <div class="payment-ver-background">
+            <div class="otp-v-container">
+                <div class="otp-ver-container">
+                    <div class="otp-ver-cover">
+                        <form action="/confirm" method="POST" class="otp-ver-form">
+                            <p class="otp-text">Xác nhận thanh toán</p>
+                            <div class="otp-fill">
+                                <label for="otp">Vui lòng điền mã OTP:</label> </br>
+                                <input type="text" class="otp" id="otp" name="otp"/>
+                            </div>
+                            <div class="otp-confirm">
+                                <button class="otp-confirm-btn"> Xác nhận </button>
+                            </div>
+                            <a id="logout" href="/logout" class="otp-ver-signout-btn">Đăng xuất</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

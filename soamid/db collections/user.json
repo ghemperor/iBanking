@@ -1,0 +1,26 @@
+{
+    "_id" : ObjectId("601ff048f101903ef0565c74"),
+    "hoTenSV" : "Nguyen Van A",
+    "soDienThoai" : "0942890312",
+    "email" : "admin1@gmail.com",
+    "tenNguoiDung" : "vanA",
+    "matKhau" : "123456789",
+    "soDuTK" : 28000000.0,
+    "lichSuGiaoDich" : []
+}
+{
+    "_id" : ObjectId("601ff048f101903ef0565c75"),
+    "hoTenSV" : "Nguyễn Khả Phúc",
+    "soDienThoai" : "0942890386",
+    "email" : "admin@gmail.com",
+    "tenNguoiDung" : "phuc",
+    "matKhau" : "123456789",
+    "soDuTK" : 27000000.0,
+    "lichSuGiaoDich" : [
+        {
+            "mssv" : "519H0217",
+            "soTienThanhToan" : 25000000.0,
+            "ngayThang" : "Mon Apr 25 2022 19:25:20 GMT+0700 (Indochina Time)"
+        }
+    ]
+}
